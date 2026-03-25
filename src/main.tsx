@@ -1,2 +1,14 @@
-console.log('Main.tsx is running (minimal)');
-document.getElementById('root').innerHTML = '<h1>Main.tsx is running!</h1>';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}
